@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="gercek_pist">
+      <static>true</static>
+      <pose>-20.0 -5.80 0 1.591593 0.001592 -0.001593</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/gozde/Masaüstü/pist/meshes/pist.dae</uri>
+              <scale>1 5 1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/gozde/Masaüstü/pist/meshes/pist.dae</uri>
+              <scale>1 5 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+  </model> 
+
+  <include>
+    <uri>model://turtlebot3_burger</uri>
+    <pose>0.032 0 0.11 0 0 0</pose>
+  </include>
+
+  </world>
+</sdf>
